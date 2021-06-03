@@ -8,7 +8,7 @@ function App(props) {
   useEffect(() => {
     setCounterValue(props.value);
     toggleLoader(false);
-  }, []);
+  }, [props.value]);
   const onIncrement = async() => {
     if (counterValue < props.maxValue) {
       const currentValue = counterValue + 1;
